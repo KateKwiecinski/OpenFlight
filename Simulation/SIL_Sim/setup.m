@@ -21,13 +21,17 @@ addpath ../Libraries
 addpath ../Controllers
 
 
-%% Set aircraft type
-
+%% Configure Airframe
 % 1 = UltraStick25e, standard outfit
 aircraft_type = 1 ;
 
+%% Configure Simulation Fidelity
+% 1 = Simplified Open-Source
+% 2 = High-Fidelity, requires Aerospace Blockset
+simulation_type = 2 ;
 
-% Configure simulation specifically for this airfame
+
+%% Configure simulation specifically for this airfame
 switch aircraft_type
     
     case 1 % UltraStick25e, standard outfit
@@ -43,7 +47,9 @@ switch aircraft_type
 end
 
 
-
+% Simulation Fidelity Variants Definition
+sim_fidelity_simple_var = Simulink.Variant('simulation_type == 1') ;
+sim_fidelity_full_var   = Simulink.Variant('simulation_type == 2') ;
 
 
 %% Load airframe configuration and trim condition
