@@ -144,7 +144,7 @@ end
 %% Load model into memory
 isLoaded = bdIsLoaded('UAV_NL'); % check to see if model is loaded or open
 if ~isLoaded
-    load_system('../NL_Sim/UAV_NL.mdl') % load model into system memory without opening diagram
+    load_system('../NL_Sim/UAV_NL.slx') % load model into system memory without opening diagram
 end
 %% SET OPERATING POINT SPECIFICATIONS
 % Note: beware of overconstraining the states of the model. "findop" often
