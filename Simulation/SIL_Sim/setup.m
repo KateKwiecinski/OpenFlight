@@ -28,7 +28,7 @@ aircraft_type = 1 ;
 %% Configure Simulation Fidelity
 % 1 = Simplified Open-Source
 % 2 = High-Fidelity, requires Aerospace Blockset
-simulation_type = 2 ;
+simulation_type = 1 ;
 
 
 %% Configure simulation specifically for this airfame
